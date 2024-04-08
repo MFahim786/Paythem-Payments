@@ -43,7 +43,7 @@ import Onboarding from './VenderOnbording';
 import venderOnbording from './services/vendoronbording';
 
 const App = () => {
-  const [vendorId, setInputValue] = useState('65fc0592d1c4c6a9a46763d1');
+  const [vendorId, setInputValue] = useState('');
   const [showAnotherComponent, setShowAnotherComponent] = useState(false);
   const [authToken, setAuthToken] = useState('');
   const handleInputChange = (event) => {
