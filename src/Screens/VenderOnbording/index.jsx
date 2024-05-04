@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import '../Css/Home.css';
-function Onboarding({authToken}) {
+import '../../Css/Home.css';
+function Onboarding() {
   useEffect(() => {
+    const authToken = localStorage.getItem('accessToken');
+    console.log(authToken);
     const script = document.createElement('script');
     script.type = 'application/javascript';
     script.src = 'https://cdn.unipaas.com/onboarding-sandbox.js';

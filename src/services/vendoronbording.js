@@ -6,7 +6,7 @@ const venderOnbording = async ({vendorId}) => {
         // Data to be sent to UNIPaaS server
         const requestData = {
             
-                "scopes": ["onboarding_write"],
+                "scopes": ["portal_read","portal_write","onboarding_write","invoice_read","invoice_write","payout_write"],
                    "vendorId": vendorId,
     
         };
@@ -19,13 +19,11 @@ const venderOnbording = async ({vendorId}) => {
             'Authorization': 'Bearer BoRhn2IG9BcMhxIVhWkKmA==' 
           }
         });
-    
-        // Send the response from UNIPaaS server to your app
-        console.log(response.data); // Access the parsed JSON data from the response
-        return response.data; // Return the parsed JSON data
+        console.log("---------", response.data);
+        return response.data; 
       } catch (error) {
         console.error('Error sending data to UNIPaaS:', error.message);
-        throw error; // Throw the error to handle it elsewhere
+        throw error; 
       }
 };
 
